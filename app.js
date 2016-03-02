@@ -15,5 +15,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/qr', routes.qr);
 app.get('/', routes.home);
+app.get('/private', routes.private);
 
 app.listen(process.env.PORT || 3000);
