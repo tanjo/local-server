@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title 'QRコード生成機'
+    link(rel='shortcut icon', href='/icon/icon.jpeg')
+  body
+    if qrimage
+      img(src=qrimage)
+      p
+        a(href='/qr')= '戻る'
+    else
+      form(method='get', action='/qr')
+        input(type='text', name='text')
+        input(type='submit', value='OK')
+      p
+        a(href='/')= '戻る'
