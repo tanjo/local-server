@@ -1,0 +1,65 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= 'Home'
+    link(rel='stylesheet', href='/css/fx.css')
+    link(rel='shortcut icon', href='/icon/icon.jpeg')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css')
+
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+    script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+    script(type='text/javascript', src='/js/fx.js')
+  body
+    h1= 'FX'
+    h2= '資産チャート'
+    div(id='chart_div')
+    h2= '設定'
+    div(class="form-group settings")
+      form(name='add_position')
+        div(class='form-group')
+          h3
+            a(target='_blank' href='http://www.yjfx.jp/gaikaex/information/outline/')= '評価レート'
+          input(type='text' class='form-control' value='117.815' name='hyoka_rate')
+        div(class='form-group')
+          h3= '資本金'
+          input(type='text' class='form-control' value='1000000' name='resource')
+        div(class='form-group')
+          h3= '基準'
+          input(type='text' class='form-control' value='100' name='standard')
+        div(class='form-group')
+          h3= 'ロスカットアラート'
+          div(class='input-group')
+            input(type='text' class='form-control' value='100' name='alert')
+            div(class='input-group-addon')= '%'
+        div(class='form-group')
+          h3= '変化する範囲'
+          div(class='input-group')
+            input(type='text' class='form-control' value='100' name='pips')
+            div(class='input-group-addon')= 'pips'
+        div(class='form-group')
+          h3= '金額'
+          input(type='text' class='form-control' value='100.000' name='money')
+        div(class='form-group')
+          h3= '枚数（１万）'
+          div(class='input-group')
+            input(type='text' class='form-control' value='1' name='maisu')
+            div(class='input-group-addon')= '枚'
+        div(class='form-group')
+          h3= 'ポジション'
+          div(class=radio)
+            label
+              input(type='radio', name='position', value='kai', checked)
+              買い
+          div(class=radio)
+            label
+              input(type='radio', name='position', value='uri')
+              売り
+        div(class='form-group')
+          input(type='button' class='btn btn-default' value='更新' onClick='show_list()')
+          input(type='button' class='btn btn-primary' value='追加' onClick='add()')
+          input(type='button' class='btn btn-danger' value='取消' onClick='deleteList()')
+    h1= '損益計算'
+    div(id='list')

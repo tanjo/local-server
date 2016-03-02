@@ -10,12 +10,14 @@ app.set('views', __dirname + '/views');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(morgan({ format: 'dev', immediate: true }));
+app.use(morgan('dev', { immediate: true }));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/qr', routes.qr);
 app.get('/', routes.home);
 app.get('/private', routes.private);
+app.get('/fx', routes.fx);
+
 app.use(routes.notFound);
 app.use(routes.serverError);
 
