@@ -4,3 +4,6 @@ module.exports.private = require('./private');
 module.exports.notFound = require('./404');
 module.exports.serverError = require('./500');
 module.exports.fx = require('./fx');
+module.exports.samplePhantom = require('./sample-phantom');
+module.exports.rss = require('./rss');
+module.exports.daily = require('./daily');

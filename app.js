@@ -17,6 +17,9 @@ app.get('/qr', routes.qr);
 app.get('/', routes.home);
 app.get('/private', routes.private);
 app.get('/fx', routes.fx);
+app.get('/sample-phantom', routes.samplePhantom);
+app.get('/rss.xml', routes.rss);
+app.get('/daily', routes.daily);
 
 app.use(routes.notFound);
 app.use(routes.serverError);
