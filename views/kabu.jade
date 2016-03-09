@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= '株'
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='shortcut icon', href='/icon/icon.jpeg')
+  body
+    h1= '株'
+    if symbol
+      h2=symbol
+      h2=stoksPrice
+      img(src=imageUrl, alt='チャート画像')
+    else
+      form(method='get', action='/kabu')
+        input(type='text', name='code')
+        input(type='submit', value='OK')
+    p
+      a(href='/')= '戻る'
