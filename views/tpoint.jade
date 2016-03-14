@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title= 'T-site チェック'
+    link(rel='shortcut icon', href='/icon/icon.jpeg')
+  body
+    h1= 'T-site チェック'
+    if contents
+      div
+        - for(var i = 0,l = contents.length; i < l; i += 1) {
+          p= contents[i]
+        - }
+    p
+      a(href='/')= '戻る'

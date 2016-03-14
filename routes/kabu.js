@@ -1,6 +1,6 @@
 module.exports = function(req, res) {
 
-  var code = req.param('code');
+  var code = req.query.code;
 
   if (code) {
     var phantom = require('phantom');

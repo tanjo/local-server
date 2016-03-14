@@ -8,6 +8,13 @@ module.exports = function(req, res) {
   });
 
   feed.item({
+    title: 'T-site のチェック',
+    description: 'RSS つけてくれよほんと',
+    url: 'http://localhost:3000/tpoint',
+    pubDate: new Date(2016, 3 - 1, 14, 13, 01).toUTCString()
+  });
+
+  feed.item({
     title: '株価機能追加',
     description: '保有株のデータ表示',
     url: 'http://localhost:3000/kabu',

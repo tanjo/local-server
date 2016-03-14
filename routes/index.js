@@ -8,3 +8,4 @@ module.exports.samplePhantom = require('./sample-phantom');
 module.exports.rss = require('./rss');
 module.exports.daily = require('./daily');
 module.exports.kabu = require('./kabu');
+module.exports.tpoint = require('./tpoint');

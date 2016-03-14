@@ -13,7 +13,6 @@ git ls-files -v
 > S views/private.jade
 ```
 
-
 ```sh
 npm run-script auto
 ```

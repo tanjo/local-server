@@ -1,7 +1,7 @@
 module.exports = function(req, res) {
   var qr = require('qr-image');
 
-  var text = req.param('text');
+  var text = req.query.text;
   var qrimage;
   if (text) {
     var image = qr.imageSync(text, { type: 'png' });
